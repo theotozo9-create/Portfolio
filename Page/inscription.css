@@ -1,0 +1,149 @@
+ *{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    padding-top: 110px;
+}
+
+.header{
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    width: 100%;
+    background-color: rgb(201, 203, 204);
+    padding: 10px 20px;
+}
+.header img{
+    width: 45px;
+    height: 45px;
+    border-radius: 10px;
+    margin: 25px;
+}
+.header h2{
+    margin-top: 40px;
+    margin-left: -20px;
+    font-family: 'Times New Roman', Times, serif;
+}
+.nav{
+    position: relative;
+    margin-left: 230px;
+    margin-top: 45px;
+    word-spacing: 18px;
+}
+.nav a{ 
+    text-decoration: none;
+    color: black;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-size: 15px;
+    transition: 0.2s;
+}
+.nav a:hover{
+    color: white;
+    text-decoration:underline;
+}
+.btn {
+    margin-left: 300px;
+    margin-top: 35px;
+    word-spacing: 10px;
+}
+.btn a{
+    
+    font-size: 17px;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    text-decoration: none;
+}
+.btn button,
+.btn .login-button,
+.btn .register-button{
+    padding: 10px;
+    background-color: #1a1e42;
+    color: white;
+    border-radius: 10px;
+    text-decoration: none;
+    transition: 0.2s;
+}
+.btn button:hover,
+.btn .login-button:hover,
+.btn .register-button:hover{
+    background-color: rgb(50, 48, 48);
+}
+ 
+ .registration-page {
+            min-height: calc(100vh - 110px);
+            padding: 50px 20px;
+            background: #f5f7f6;
+        }
+
+        .registration-card {
+            max-width: 700px;
+            margin: 0 auto;
+            padding: 35px;
+            background: white;
+            border-radius: 16px;
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.12);
+        }
+
+        .registration-card h1 {
+            margin-bottom: 10px;
+            color: #00843d;
+        }
+
+        .registration-card p {
+            margin-bottom: 25px;
+            color: #555;
+        }
+
+        .registration-form {
+            display: grid;
+            gap: 16px;
+        }
+
+        .registration-form label {
+            display: grid;
+            gap: 6px;
+            font-weight: bold;
+            color: #333;
+        }
+
+        .registration-form input,
+        .registration-form select,
+        .registration-form textarea {
+            width: 100%;
+            padding: 12px;
+            border: 1px solid #d5d5d5;
+            border-radius: 8px;
+            font: inherit;
+        }
+
+        .registration-form textarea {
+            min-height: 100px;
+            resize: vertical;
+        }
+
+        .registration-form button {
+            padding: 13px;
+            border: 0;
+            border-radius: 8px;
+            background: #00843d;
+            color: white;
+            font-size: 16px;
+            font-weight: bold;
+            cursor: pointer;
+        }
+
+        .registration-form button:hover {
+            background: #006b31;
+        }
+
+        .back-link {
+            display: inline-block;
+            margin-top: 20px;
+            color: #00843d;
+        }

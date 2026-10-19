@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Connexion - ForgeUnity</title>
+    <link rel="stylesheet" href="connexion.css">
+</head>
+<body>
+    <main class="login-page">
+        <section class="login-card" aria-labelledby="login-title">
+            <p class="eyebrow">BIENVENUE</p>
+            <h1 id="login-title">Connexion à votre espace</h1>
+            <p class="register-prompt">
+                Pas encore de compte ?
+                <a href="inscription.html">Inscrire mon entreprise</a>
+            </p>
+
+            <div class="account-tabs" role="tablist" aria-label="Type de compte">
+                <button class="account-tab active" type="button" role="tab" aria-selected="true">
+                    Je suis client
+                </button>
+                <button class="account-tab" type="button" role="tab" aria-selected="false">
+                    Je suis entreprise
+                </button>
+            </div>
+
+            <form class="login-form">
+                <label for="email">Adresse e-mail</label>
+                <input id="email" name="email" type="email" placeholder="vous@exemple.bj" required>
+
+                <div class="password-heading">
+                    <label for="password">Mot de passe</label>
+                    <a href="#">Mot de passe oublié ?</a>
+                </div>
+                <div class="password-field">
+                    <input id="password" name="password" type="password" placeholder="••••••••" required>
+                    <button class="toggle-password" type="button" aria-label="Afficher le mot de passe">◉</button>
+                </div>
+
+                <label class="remember-me">
+                    <input type="checkbox" name="remember">
+                    <span>Se souvenir de moi</span>
+                </label>
+
+                <button class="login-button" type="submit">Se connecter</button>
+            </form>
+
+        </section>
+    </main>
+</body>
+</html>

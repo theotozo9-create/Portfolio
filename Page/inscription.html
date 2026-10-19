@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inscrire mon entreprise - ForgeUnity</title>
+    <link rel="stylesheet" href="inscription.css">
+</head>
+<body>
+    <header class="header">
+        <img src="Vertical Lockup on Blue Background.png" alt="Logo ForgeUnity">
+        <h2>ForgeUnity</h2>
+        <div class="nav">
+            <a href="index.html">Accueil</a>
+            <a href="Presentation.html">Présentation</a>
+            <a href="Espace_Admin.html">Espace admin</a>
+        </div>
+    </header>
+
+    <main class="registration-page">
+        <section class="registration-card">
+            <h1>Inscrire mon entreprise</h1>
+            <p>Présentez votre entreprise et vos services aux utilisateurs de ForgeUnity.</p>
+
+            <form class="registration-form">
+                <label>
+                    Nom de l'entreprise
+                    <input type="text" name="company" required>
+                </label>
+                <label>
+                    Secteur d'activité
+                    <input type="text" name="sector" required>
+                </label>
+                <label>
+                    Localisation
+                    <select name="location" required>
+                        <option value="">Choisir une ville</option>
+                        <option>Abomey-Calavi</option>
+                        <option>Cotonou</option>
+                        <option>Porto-Novo</option>
+                        <option>Parakou</option>
+                        <option>Bohicon</option>
+                        <option>Ouidah</option>
+                        <option>Natitingou</option>
+                    </select>
+                </label>
+                <label>
+                    Téléphone
+                    <input type="tel" name="phone" required>
+                </label>
+                <label>
+                    Description des services
+                    <textarea name="description" required></textarea>
+                </label>
+                <button type="submit">Envoyer mon inscription</button>
+            </form>
+
+            <a class="back-link" href="index.html">Retour à l'accueil</a>
+        </section>
+    </main>
+</body>
+</html>

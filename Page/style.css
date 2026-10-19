@@ -1,0 +1,1105 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    padding-top: 110px;
+}
+
+.header{
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    width: 100%;
+    background-color: rgb(228, 231, 233);
+    padding: 10px 20px;
+}
+.header img{
+    width: 45px;
+    height: 45px;
+    border-radius: 10px;
+    margin: 25px;
+}
+.header h2{
+    margin-top: 40px;
+    margin-left: -20px;
+    font-family: 'Times New Roman', Times, serif;
+}
+.nav{
+    position: relative;
+    margin-left: 230px;
+    margin-top: 45px;
+    word-spacing: 15px;
+}
+.nav a{ 
+    text-decoration: none;
+    color: black;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-size: 15px;
+    transition: 0.2s;
+}
+.nav a:hover{
+    color: rgb(3, 102, 97);
+
+}
+.btn {
+    margin-left: 300px;
+    margin-top: 35px;
+    word-spacing: 10px;
+}
+.btn a{
+    
+    font-size: 17px;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    text-decoration: none;
+}
+.btn button,
+.btn .login-button,
+.btn .register-button{
+    padding: 10px;
+    background-color: #1a1e42;
+    color: white;
+    border-radius: 10px;
+    text-decoration: none;
+    transition: 0.2s;
+}
+.btn button:hover,
+.btn .login-button:hover,
+.btn .register-button:hover{
+    background-color: rgb(50, 48, 48);
+}
+
+
+
+
+
+/* =========================
+   SECTION HERO
+========================= */
+
+.hero {
+    position: relative;
+    min-height: 650px;
+
+    background-image: url("b45df23b7b6ebb3dc8b77d904e44fc77.jpg");
+    background-size: cover;
+    background-position: center;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    overflow: hidden;
+}
+
+/* Couche transparente sur l'image */
+
+.hero::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+
+    background: rgba(0, 0, 0, 0.48);
+
+    z-index: 1;
+}
+
+/* =========================
+   CONTENU
+========================= */
+
+.hero-content {
+    position: relative;
+    z-index: 2;
+
+    width: 100%;
+    max-width: 1200px;
+
+    padding: 60px 30px;
+
+    text-align: center;
+
+    color: white;
+}
+
+/* =========================
+   BADGE
+========================= */
+
+.badge {
+    display: inline-block;
+
+    background: rgba(255, 255, 255, 0.85);
+    color: #00843d;
+
+    padding: 12px 22px;
+    border-radius: 30px;
+
+    font-size: 16px;
+    font-weight: bold;
+
+    margin-bottom: 25px;
+
+    animation: apparition 0.8s ease forwards;
+}
+
+/* =========================
+   TITRE
+========================= */
+
+.hero h1 {
+    font-size: clamp(38px, 5vw, 70px);
+
+    line-height: 1.05;
+
+    font-weight: 800;
+
+    margin-bottom: 20px;
+
+    animation: apparition 1s ease forwards;
+}
+
+.hero h1 span {
+    color: #ffd000;
+
+    position: relative;
+}
+
+/* Soulignement du mot */
+
+.hero h1 span:first-child::after {
+    content: "";
+
+    position: absolute;
+
+    left: 0;
+    bottom: -5px;
+
+    width: 100%;
+    height: 5px;
+
+    background: #ffd000;
+
+    border-radius: 50%;
+}
+
+/* =========================
+   SOUS-TITRE
+========================= */
+
+.hero p {
+    font-size: 20px;
+
+    margin-bottom: 40px;
+
+    color: #f1f1f1;
+
+    animation: apparition 1.2s ease forwards;
+}
+
+/* =========================
+   BARRE DE RECHERCHE
+========================= */
+
+.search-box {
+    width: 100%;
+    max-width: 1150px;
+
+    margin: auto;
+
+    background: white;
+
+    padding: 10px;
+
+    border-radius: 18px;
+
+    display: flex;
+    align-items: stretch;
+
+    gap: 10px;
+
+    box-shadow: 0 10px 35px rgba(0, 0, 0, 0.25);
+
+    animation: apparition 1.4s ease forwards;
+}
+
+/* Champs */
+
+.search-field {
+    flex: 1;
+
+    display: flex;
+    align-items: center;
+
+    gap: 15px;
+
+    padding: 12px 18px;
+
+    border: 1px solid #ddd;
+
+    text-align: left;
+
+    background: white;
+}
+
+.search-field:first-child {
+    border-radius: 10px 0 0 10px;
+}
+
+.icon {
+    font-size: 27px;
+    color: #00843d;
+}
+
+.search-field label {
+    display: block;
+
+    font-size: 14px;
+
+    color: #555;
+
+    margin-bottom: 5px;
+}
+
+.search-field input {
+    width: 100%;
+
+    border: none;
+    outline: none;
+
+    font-size: 16px;
+
+    color: #222;
+}
+
+.search-field input::placeholder {
+    color: #999;
+}
+
+.search-field select {
+    width: 100%;
+
+    border: none;
+    outline: none;
+
+    background: white;
+
+    font-size: 16px;
+
+    color: #222;
+
+    cursor: pointer;
+}
+
+/* =========================
+   BOUTON
+========================= */
+
+.search-button {
+    min-width: 180px;
+
+    border: none;
+
+    border-radius: 10px;
+
+    background: #00843d;
+
+    color: white;
+
+    font-size: 16px;
+
+    font-weight: bold;
+
+    cursor: pointer;
+
+    transition: 0.3s;
+}
+
+.search-button:hover {
+    background: #006b31;
+
+    transform: translateY(-2px);
+    animation: apparition 1.6s ease forwards;
+}
+/* =========================
+   ANIMATION
+========================= */
+
+@keyframes apparition {
+
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+}
+
+
+
+/* =========================
+   ANNuaire
+========================= */
+
+.annuaire {
+    background-color: #f5f3ed;
+
+    padding: 60px 36px 70px;
+
+    color: #183b70;
+}
+
+
+/* =========================
+   EN-TÊTE DE L'ANNUAIRE
+========================= */
+
+.annuaire-header {
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: flex-end;
+
+    margin-bottom: 55px;
+}
+
+
+.petit-titre {
+    display: block;
+
+    color: #b0273e;
+
+    font-size: 15px;
+
+    letter-spacing: 3px;
+
+    margin-bottom: 15px;
+}
+
+
+.annuaire-header h2 {
+    font-family: Georgia, 'Times New Roman', serif;
+
+    font-size: 52px;
+
+    margin: 0;
+
+    color: #183b70;
+}
+
+
+/* Lien voir tout */
+
+.voir-annuaire {
+    color: #183b70;
+
+    font-size: 18px;
+
+    font-weight: bold;
+
+    text-decoration: none;
+
+    margin-bottom: 8px;
+}
+
+
+.voir-annuaire span {
+    font-size: 25px;
+
+    margin-left: 5px;
+
+    transition: 0.3s;
+}
+
+
+.voir-annuaire:hover span {
+    margin-left: 12px;
+}
+
+
+/* =========================
+   CATEGORIES
+========================= */
+
+.categories {
+    display: flex;
+
+    gap: 12px;
+
+    margin-bottom: 48px;
+}
+
+
+.categorie {
+    background-color: white;
+
+    border: 1px solid #d0d8e2;
+
+    color: #183b70;
+
+    padding: 15px 25px;
+
+    border-radius: 30px;
+
+    font-size: 17px;
+
+    cursor: pointer;
+
+    transition: 0.3s;
+}
+
+
+/* Catégorie sélectionnée */
+
+.categorie.active {
+    background-color: #183f75;
+
+    color: white;
+
+    border-color: #183f75;
+
+    box-shadow: 0 5px 12px rgba(0, 0, 0, 0.15);
+}
+
+
+.categorie:hover {
+    background-color: #183f75;
+
+    color: white;
+}
+
+
+/* =========================
+   GRILLE
+========================= */
+
+.professionnels {
+    display: grid;
+
+    grid-template-columns: repeat(3, 1fr);
+
+    gap: 35px 38px;
+}
+
+
+/* =========================
+   CARTE
+========================= */
+
+.carte {
+    background-color: white;
+
+    border-radius: 17px;
+
+    overflow: hidden;
+
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+
+    transition: 0.3s;
+}
+
+
+.carte:hover {
+    transform: translateY(-6px);
+
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.15);
+}
+
+
+/* =========================
+   PHOTO
+========================= */
+
+.carte > img {
+    width: 100%;
+
+    height: 240px;
+
+    object-fit: cover;
+
+    display: block;
+}
+
+
+/* =========================
+   CONTENU CARTE
+========================= */
+
+.carte-contenu {
+    padding: 25px;
+}
+
+
+/* Nom + badge */
+
+.nom-verification {
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    gap: 10px;
+
+    margin-bottom: 12px;
+}
+
+
+.nom-verification h3 {
+    font-family: Georgia, 'Times New Roman', serif;
+
+    font-size: 25px;
+
+    color: #183f75;
+
+    margin: 0;
+}
+
+
+/* =========================
+   BADGE VERIFIE
+========================= */
+
+.badge-verifie {
+    white-space: nowrap;
+
+    color: #168052;
+
+    background-color: #edf7f1;
+
+    border: 1px solid #a9d8bf;
+
+    padding: 7px 12px;
+
+    border-radius: 20px;
+
+    font-size: 12px;
+
+    font-weight: bold;
+}
+
+
+/* Badge local */
+
+.badge-local {
+    white-space: nowrap;
+
+    color: #183f75;
+
+    background-color: #eef2f8;
+
+    border: 1px solid #bcc9dc;
+
+    padding: 7px 12px;
+
+    border-radius: 20px;
+
+    font-size: 12px;
+
+    font-weight: bold;
+}
+
+
+/* =========================
+   CATEGORIE + VILLE
+========================= */
+
+.categorie-ville {
+    color: #52759e;
+
+    font-size: 16px;
+
+    margin-bottom: 20px;
+}
+
+
+.categorie-ville span {
+    margin: 0 8px;
+
+    color: #aaa;
+}
+
+
+/* =========================
+   DESCRIPTION
+========================= */
+
+.description {
+    color: #345678;
+
+    font-size: 17px;
+
+    line-height: 1.7;
+
+    margin: 0;
+}
+
+
+/* =========================
+   SECTION ENTREPRISE
+========================= */
+
+.entreprise {
+    width: calc(100% - 72px);
+
+    margin: 70px auto;
+
+    padding: 70px 95px;
+
+    background-color: #0a6a8d;
+
+    border-radius: 35px;
+
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    color: white;
+}
+.entreprise:hover{
+    background-color: #1f4278;
+}
+
+
+/* =========================
+   PARTIE GAUCHE
+========================= */
+
+.entreprise-texte {
+    max-width: 800px;
+}
+
+
+/* Petite étiquette */
+
+.etiquette {
+    display: inline-flex;
+
+    align-items: center;
+
+    gap: 10px;
+
+    padding: 12px 20px;
+
+    margin-bottom: 25px;
+
+    background-color: rgba(255, 255, 255, 0.12);
+
+    border-radius: 30px;
+
+    color: #eeeeee;
+
+    font-size: 14px;
+
+    font-weight: bold;
+
+    letter-spacing: 2px;
+}
+
+
+/* Petit point vert */
+
+.etiquette span {
+    width: 9px;
+
+    height: 9px;
+
+    background-color: #53b982;
+
+    border-radius: 50%;
+
+    display: inline-block;
+}
+
+
+/* =========================
+   TITRE
+========================= */
+
+.entreprise h2 {
+    margin: 0 0 25px 0;
+
+    font-family: Georgia, 'Times New Roman', serif;
+
+    font-size: 52px;
+
+    line-height: 1.1;
+
+    color: white;
+}
+
+
+/* =========================
+   DESCRIPTION
+========================= */
+
+.entreprise-texte p {
+    max-width: 850px;
+
+    margin: 0;
+
+    color: #d8e2f0;
+
+    font-size: 20px;
+
+    line-height: 1.8;
+}
+
+
+/* =========================
+   PARTIE DROITE
+========================= */
+
+.entreprise-action {
+    min-width: 420px;
+
+    text-align: center;
+}
+
+
+/* =========================
+   BOUTON
+========================= */
+
+.bouton-entreprise {
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    gap: 20px;
+
+    padding: 25px 35px;
+
+    background-color: #000000;
+
+    color: white;
+
+    text-decoration: none;
+
+    border-radius: 15px;
+
+    font-size: 20px;
+
+    font-weight: bold;
+
+    transition: 0.3s;
+}
+
+
+.bouton-entreprise span {
+    font-size: 28px;
+
+    transition: 0.3s;
+}
+
+
+/* Animation au survol */
+
+.bouton-entreprise:hover {
+    background-color: #94646d;
+}
+
+
+.bouton-entreprise:hover span {
+    transform: translateX(8px);
+}
+
+
+/* Petit texte sous le bouton */
+
+.entreprise-action p {
+    margin-top: 18px;
+
+    color: #c8d4e5;
+
+    font-size: 15px;
+}
+        .registration-page {
+            min-height: calc(100vh - 110px);
+            padding: 50px 20px;
+            background: #f5f7f6;
+        }
+
+        .registration-card {
+            max-width: 700px;
+            margin: 0 auto;
+            padding: 35px;
+            background: white;
+            border-radius: 16px;
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.12);
+        }
+
+        .registration-card h1 {
+            margin-bottom: 10px;
+            color: #00843d;
+        }
+
+        .registration-card p {
+            margin-bottom: 25px;
+            color: #555;
+        }
+
+        .registration-form {
+            display: grid;
+            gap: 16px;
+        }
+
+        .registration-form label {
+            display: grid;
+            gap: 6px;
+            font-weight: bold;
+            color: #333;
+        }
+
+        .registration-form input,
+        .registration-form select,
+        .registration-form textarea {
+            width: 100%;
+            padding: 12px;
+            border: 1px solid #d5d5d5;
+            border-radius: 8px;
+            font: inherit;
+        }
+
+        .registration-form textarea {
+            min-height: 100px;
+            resize: vertical;
+        }
+
+        .registration-form button {
+            padding: 13px;
+            border: 0;
+            border-radius: 8px;
+            background: #00843d;
+            color: white;
+            font-size: 16px;
+            font-weight: bold;
+            cursor: pointer;
+        }
+
+        .registration-form button:hover {
+            background: #006b31;
+        }
+
+        .back-link {
+            display: inline-block;
+            margin-top: 20px;
+            color: #00843d;
+        }
+
+        /* =========================
+   FOOTER
+========================= */
+
+.footer {
+    background-color: #102f5f;
+    color: white;
+    padding-top: 60px;
+    margin-top: 70px;
+}
+
+/* =========================
+   LOGO
+========================= */
+
+.footer-logo {
+    display: flex;
+    align-items: center;
+
+    gap: 12px;
+
+    margin-bottom: 20px;
+}
+
+
+.footer-logo img {
+    width: 45px;
+    height: 45px;
+
+    border-radius: 8px;
+}
+
+
+.footer-logo h2 {
+    margin: 0;
+
+    font-family: Georgia, "Times New Roman", serif;
+
+    font-size: 26px;
+}
+
+
+/* =========================
+   DESCRIPTION
+========================= */
+
+.footer-description p {
+    max-width: 330px;
+
+    color: #cbd7e8;
+
+    font-size: 15px;
+
+    line-height: 1.7;
+
+    margin-bottom: 18px;
+}
+
+
+.footer-description .location {
+    color: white;
+
+    font-weight: bold;
+}
+
+
+/* =========================
+   TITRES DES COLONNES
+========================= */
+
+.footer-column h3 {
+    margin-bottom: 22px;
+
+    font-size: 17px;
+
+    color: white;
+}
+
+
+/* =========================
+   LIENS
+========================= */
+
+.footer-column a {
+    display: block;
+
+    width: fit-content;
+
+    margin-bottom: 14px;
+
+    color: #cbd7e8;
+
+    font-size: 15px;
+
+    text-decoration: none;
+
+    transition: 0.3s;
+}
+
+
+/* Animation des liens */
+
+.footer-column a:hover {
+    color: white;
+
+    transform: translateX(5px);
+}
+
+
+.footer-container {
+    width: 92%;
+    max-width: 1400px;
+
+    margin: auto;
+
+    display: grid;
+
+    grid-template-columns:
+        2fr
+        1fr
+        1.2fr
+        1.5fr;
+
+    gap: 60px;
+
+    padding-bottom: 50px;
+}
+
+
+/* =========================
+   LIGNE DE SEPARATION
+========================= */
+
+.footer-line {
+    width: 92%;
+    max-width: 1400px;
+
+    height: 1px;
+
+    margin: auto;
+
+    background-color: rgba(255, 255, 255, 0.15);
+}
+
+
+/* =========================
+   BAS DU FOOTER
+========================= */
+
+.footer-bottom {
+    width: 92%;
+    max-width: 1400px;
+
+    min-height: 75px;
+
+    margin: auto;
+
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    gap: 30px;
+}
+
+
+.footer-bottom p {
+    margin: 0;
+
+    color: #aebed3;
+
+    font-size: 13px;
+}
+
+
+/* =========================
+   LIENS LEGAUX
+========================= */
+
+.legal-links {
+    display: flex;
+
+    gap: 25px;
+}
+
+
+.legal-links a {
+    color: #aebed3;
+
+    font-size: 13px;
+
+    text-decoration: none;
+
+    transition: 0.3s;
+}
+
+
+.legal-links a:hover {
+    color: white;
+}
